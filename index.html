@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>iMug product demo</title>
+
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700" rel="stylesheet">
+		</head>
+		<body>
+			<!-- starte header section which will contain logo and product name -->
+			<div id="header">
+				<div class="corp-logo">
+					<span class="logo"> <img src="img/logoos/logo-black-md.png"></span>
+					<span class="corp"><h3>Your travel buddy on the go</h1></span>
+				</div>
+			</div>
+			<!-- end header section -->
+
+			<!-- start main product section where image will change based on click function -->
+			<div id="product-section">
+				<!-- bottle -->
+				<div id="bottle">
+					<img id="myImage" onclick="changeImage()" src="Travel-Tumblr_V1.png"> 
+
+					<!-- <img id="myImage" onclick="changeImage()" src="Travel-Tumblr_V1.png" alt="" usemap="#Map" />
+						<map name="Map" id="Map">
+						    <area alt="" title="temperature" href="#" shape="poly" coords="429,172,431,261,546,257,550,177" />
+						    <area alt="" title="information" href="#" shape="poly" coords="446,344,447,408,523,404,519,343" />
+						    [...]
+						</map> -->
+				</div>
+
+			</div>
+
+			<!-- start footer section -->
+			<footer>
+				<span>&copy;Copryright Cuppy - <a href="https://twitter.com/mdiforg" target="_blank">MDIF</a> x <a href="https://twitter.com/hackastory" target="_blank">Hackastory</a> </span>
+			</footer>
+
+			<script>
+			//document.getElementById("demo").innerHTML="Hello World!";
+			function changeImage() {
+			    var image = document.getElementById('myImage');
+			    if (image.src.match("Travel-Tumblr_V1.png")) {
+			        image.src = "Travel-Tumblr_V2.png";
+			    } 
+				else if (image.src.match("Travel-Tumblr_V2.png")){
+				image.src = "Travel-Tumblr_V3.png";
+				}
+				//else if (image.src.match("image3"){}
+				else if (image.src.match("Travel-Tumblr_V3.png")){
+				image.src = "Travel-Tumblr_V4.png";
+				}
+				else {
+			        image.src = "Travel-Tumblr_V1.png";
+			    }
+			}
+
+			var myVar = setInterval(myTimer, 2000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+	
+	 var image = document.getElementById('myImage');
+    //if (image.src.match("image1")) {
+        image.src = "Travel-Tumblr_V4.png";
+    //} 
+	
+	
+	
+}
+
+			</script>
+		</body>
+	</html>
